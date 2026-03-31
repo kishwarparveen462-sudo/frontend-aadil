@@ -196,9 +196,9 @@ export default function PremiumDSAUI() {
       {/* Mobile Header */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gray-900 border-b border-gray-800">
         <button onClick={() => setOpenSidebar(true)} className="text-xl">☰</button>
-        <div>
-        <Layers className="text-blue-400" />
-        <h1 className="text-blue-400 font-bold">DSA Course</h1>
+        <div className="title-header">
+        <Layers className="site-header-logo text-blue-400" />
+        <h1 className="text-blue-400 font-bold">Micron</h1>
         </div>
       </div>
 
@@ -208,13 +208,13 @@ export default function PremiumDSAUI() {
         ${openSidebar ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         <div className="flex justify-between items-center md:hidden mb-4">
-          <h1 className="text-blue-400 font-bold">DSA Course</h1>
+          <h1 className="text-blue-400 font-bold">Syllabus</h1>
           <button onClick={() => setOpenSidebar(false)}>✖</button>
         </div>
 
         <div className="flex items-center gap-2 mb-6 hidden md:flex">
           <Layers className="text-blue-400" />
-          <h1 className="text-lg font-bold text-blue-400">DSA Course</h1>
+          <h1 className="text-lg font-bold text-blue-400">Micron</h1>
         </div>
 
         <div className="relative mb-5">
@@ -251,8 +251,8 @@ export default function PremiumDSAUI() {
       {/* Main Content */}
       <div className="flex-1 p-4 md:p-10 overflow-y-auto mt-14 md:mt-0">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mb-6">
-            About Course
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mt-6 mb-6 text-center">
+            Data Structure & Algorithm
           </h2>
 
           <div className="icon-about-course grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
@@ -262,8 +262,10 @@ export default function PremiumDSAUI() {
             <CourseCard icon={faClock} title="Class Schedule" value={courseInfo.schedule} />
             <CourseCard icon={faChartLine} title="Level" value={courseInfo.level} />
             <CourseCard icon={faDotCircle} title="Mode" value={courseInfo.mode} />
+            <div className="flex justify-center gap-3">
             <Link to="/addmission" className="reg-btn"><button>Register Now</button></Link>
-
+            <button className="reg-btn" onClick={() => setOpenSidebar(true)}>View Syllabus</button>
+            </div>
           </div>
 
           {active && (
@@ -281,3 +283,5 @@ export default function PremiumDSAUI() {
     </div>
   );
 }
+
+

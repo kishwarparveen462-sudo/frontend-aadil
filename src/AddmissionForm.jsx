@@ -23,7 +23,7 @@ const AdmissionForm = () => {
 
     console.log("Form Submitted:", formData);
       try{
-        const res = await axios.post("http://localhost:5000/api/students/register",
+        const res = await axios.post("https://backend-aadil.onrender.com/api/students/register",
       formData
     );
     console.log(res.data);
