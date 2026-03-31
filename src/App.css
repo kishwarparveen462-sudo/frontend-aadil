@@ -9,4 +9,28 @@
   margin-left: 5px;
 }
 
+.icon-about-course p{
+  margin-left: 24px;
+}
+
+.reg-btn{
+  height: 40px;
+  width: 40%;
+  padding: 7px;
+  border-radius: 10px;
+  background: rgb(5, 5, 79);
+  border: none;
+  outline: none;
+  color: #fff;
+  justify-self: center;
+  grid-column: 1/-1;
+  font: 20px 'Arial';
+  text-align: center;
+}
+
+.reg-btn:hover{
+  filter: drop-shadow(0px 0px 8px rgb(158, 239, 239));
+}
+
+
 

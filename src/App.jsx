@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import {Link} from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ChevronDown, ChevronRight, Layers } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -195,7 +196,10 @@ export default function PremiumDSAUI() {
       {/* Mobile Header */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gray-900 border-b border-gray-800">
         <button onClick={() => setOpenSidebar(true)} className="text-xl">☰</button>
+        <div>
+        <Layers className="text-blue-400" />
         <h1 className="text-blue-400 font-bold">DSA Course</h1>
+        </div>
       </div>
 
       {/* Sidebar */}
@@ -258,6 +262,8 @@ export default function PremiumDSAUI() {
             <CourseCard icon={faClock} title="Class Schedule" value={courseInfo.schedule} />
             <CourseCard icon={faChartLine} title="Level" value={courseInfo.level} />
             <CourseCard icon={faDotCircle} title="Mode" value={courseInfo.mode} />
+            <Link to="/addmission" className="reg-btn"><button>Register Now</button></Link>
+
           </div>
 
           {active && (
