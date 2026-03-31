@@ -1,0 +1,12 @@
+.icon-about-course svg{
+  display: inline-block;
+  position: relative;
+  top: 8px; 
+}
+
+.icon-about-course h3{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+
