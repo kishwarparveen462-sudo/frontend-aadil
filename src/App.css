@@ -12,13 +12,15 @@
 .icon-about-course p{
   margin-left: 24px;
 }
-
+.btn-panel{
+  grid-column: 1/-1;
+}
 .reg-btn{
   min-height: 40px;
   height: fit-content;
-  min-width: 40%;
+  min-width: 30%;
   width: fit-content;
-  padding: 7px;
+  padding: 11px;
   border-radius: 10px;
   background: rgb(5, 5, 79);
   border: none;
@@ -26,12 +28,12 @@
   color: #fff;
   justify-self: center;
   grid-column: 1/-1;
-  font: 20px 'Arial';
+  font: 1rem 'Arial';
   text-align: center;
 }
 
 .reg-btn:hover{
-  filter: drop-shadow(0px 0px 8px rgb(158, 239, 239));
+  filter: drop-shadow(0px 0px 3px rgb(158, 239, 239));
 }
 
 .title-header .site-header-logo{
@@ -42,6 +44,8 @@
 .title-header h1{
   display: inline-block;
 }
+
+
 
 
 

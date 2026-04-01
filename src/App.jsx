@@ -5,6 +5,7 @@ import { Search, ChevronDown, ChevronRight, Layers } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faCoins, faTools, faClock, faChartLine, faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import './App.css'
+import DownloadPDF  from "./DownloadPDF";
 
 const roadmap = [
   {
@@ -22,12 +23,12 @@ const roadmap = [
     title: "Algorithm Analysis",
     children: [
       { title: "Time & Space Complexity" },
-      { title: "Big O, Omega, Theta" },
+      { title: "Notations Big O, Omega, Theta" },
       { title: "Best, Worst, Average Case Analysis" },
     ],
   },
   {
-    title: "Foundations",
+    title: "Foundational",
     children: [
       { title: "Array & Dynamic Array" },
       { title: "Core Operations" },
@@ -241,6 +242,7 @@ export default function PremiumDSAUI() {
             />
           ))}
         </div>
+      <DownloadPDF/>
       </div>
 
       {/* Overlay */}
@@ -262,9 +264,9 @@ export default function PremiumDSAUI() {
             <CourseCard icon={faClock} title="Class Schedule" value={courseInfo.schedule} />
             <CourseCard icon={faChartLine} title="Level" value={courseInfo.level} />
             <CourseCard icon={faDotCircle} title="Mode" value={courseInfo.mode} />
-            <div className="flex justify-center gap-3">
+            <div className="btn-panel flex justify-center gap-3">
             <Link to="/addmission" className="reg-btn"><button>Register Now</button></Link>
-            <button className="reg-btn" onClick={() => setOpenSidebar(true)}>View Syllabus</button>
+            <div className="reg-btn"><button  onClick={() => setOpenSidebar(true)}>View Syllabus</button></div>
             </div>
           </div>
 
@@ -280,6 +282,7 @@ export default function PremiumDSAUI() {
           )}
         </motion.div>
       </div>
+      <br /><br /><br /><br />
     </div>
   );
 }
